@@ -7,6 +7,7 @@ import {FilesModule} from './files/files.module';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {UserEntity} from "./users/entities/user.entity";
 import {FileEntity} from "./files/entities/file.entity";
+import { AuthModule } from './auth/auth.module';
 import * as process from "process";
 
 @Module({
@@ -25,7 +26,7 @@ import * as process from "process";
             ],
             synchronize: true,
         }),
-        UsersModule, FilesModule],
+        UsersModule, FilesModule, AuthModule],
     controllers: [AppController],
     providers: [AppService],
 })
