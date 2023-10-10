@@ -1,4 +1,4 @@
-import styles from './Auth.module.scss'
+import cls from './Auth.module.scss'
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 
@@ -29,17 +29,19 @@ export const LoginForm: React.FC = () => {
             autoComplete="off"
         >
             <Form.Item<FieldType>
-                label="Username"
+                label="Логин"
                 name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                className={cls.input}
+                rules={[{ required: true, message: 'Введите логин!' }]}
             >
                 <Input />
             </Form.Item>
 
             <Form.Item<FieldType>
-                label="Password"
+                label="Пароль"
                 name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
+                className={cls.input}
+                rules={[{ required: true, message: 'Введите пароль!' }]}
             >
                 <Input.Password />
             </Form.Item>
@@ -47,14 +49,15 @@ export const LoginForm: React.FC = () => {
             <Form.Item<FieldType>
                 name="remember"
                 valuePropName="checked"
+                className={cls.input}
                 wrapperCol={{ offset: 8, span: 16 }}
             >
-                <Checkbox>Remember me</Checkbox>
+                <Checkbox>Запомнить меня</Checkbox>
             </Form.Item>
 
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
                 <Button type="primary" htmlType="submit">
-                    Submit
+                    Войти
                 </Button>
             </Form.Item>
         </Form>

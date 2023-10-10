@@ -5,7 +5,7 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --bg-primary: #333;
-  --text-primary: #888;
+  --text-primary: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
